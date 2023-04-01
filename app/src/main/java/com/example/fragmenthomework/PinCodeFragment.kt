@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.fragmenthomework.databinding.FragmentPinCodeBinding
-import com.example.fragmenthomework.databinding.FragmentSplashBinding
 
 class PinCodeFragment : Fragment() {
     override fun onCreateView(
@@ -21,6 +21,9 @@ class PinCodeFragment : Fragment() {
                     .addToBackStack("PinCodeFragment")
                     .add(R.id.main, AfterPinCodeFragment())
                     .commit()
+            }
+            else {
+                Toast.makeText(requireContext(), "Password xato!", Toast.LENGTH_SHORT).show()
             }
         }
 
